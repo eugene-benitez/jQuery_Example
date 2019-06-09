@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <title>jQuery Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            console.log("Document is ready!");
+
+            $('h1').html('jQuery html');
+            $('h1').click(function () {
+                console.log("h1 is being clicked.");
+                $('p').toggle();
+            });
+
+            $('h2').click(function () {
+                alert("You clicked a <p> tag!");
+            });
+
+            $('#hide').click(function () {
+                $('h3').hide();
+            });
+
+            $('#show').click(function () {
+                $('h3').show();
+            });
+
+
+            $('h3').hover(function () {
+                $('h4').text("SHREK IS HUNGRY.")
+            });
+
+            $('.append').click(function () {
+                $('.result').append('<h1> .append adds HTML! </h1>');
+            });
+
+            $('button').click(function () {
+                $('button').css('background-color', 'blue')
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class="result"></div>
+    <h1>CodingDojo</h1>
+    <p>This is jQuery.</p>
+    <br>
+    <h2>Click for alert!</h2>
+
+
+    <button id="hide">Hide all H3</button>
+    <button id="show">Show all H3</button>
+
+    <h3>SHREK SAYS THIS IS HIS SWAMP</h3>
+    <h4>AND SHREK IS LOVE</h4>
+
+    <button class="append">Append</button>
+    <div class="result"></div>
+
+</body>
+
+</html>
